@@ -23,7 +23,7 @@ foreach ($folder in $foldersToClean) {
         Remove-Item -Path $targetPath -Recurse -Force -ErrorAction SilentlyContinue
     }
 }
-$filesToClean = @("index.html", "sleep-apnea.html", "dental-emergencies.html", "dental-technology.html", "specials-promotions.html", "patient-forms.html", "payment-options.html", "crofton-dental-center-smile-club.html")
+$filesToClean = @("index.html", "index2.html", "sleep-apnea.html", "dental-emergencies.html", "dental-technology.html", "specials-promotions.html", "patient-forms.html", "payment-options.html", "crofton-dental-center-smile-club.html")
 foreach ($file in $filesToClean) {
     $targetPath = Join-Path $workspaceRoot $file
     if (Test-Path $targetPath) {
@@ -93,6 +93,9 @@ foreach ($page in $pages) {
     
     if ($pageRelPath -eq "index.html") {
         $outRelPath = "index.html"
+        $prefix = "./"
+    } elseif ($pageRelPath -eq "index2.html") {
+        $outRelPath = "index2.html"
         $prefix = "./"
     } else {
         # Split path
