@@ -8,13 +8,13 @@ activeTab: home
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
   :root {
-    --bg-base: #000000;
-    --bg-surface: #0a0a0a;
-    --bg-surface-hover: #141414;
-    --border-light: rgba(255, 255, 255, 0.08);
-    --border-hover: rgba(255, 255, 255, 0.2);
-    --text-main: #ededed;
-    --text-muted: #888888;
+    --bg-base: #ffffff;
+    --bg-surface: #fafafa;
+    --bg-surface-hover: #f4f4f5;
+    --border-light: rgba(0, 0, 0, 0.08);
+    --border-hover: rgba(0, 0, 0, 0.2);
+    --text-main: #111111;
+    --text-muted: #666666;
     --accent-glow: linear-gradient(135deg, #0070F3 0%, #F81CE5 100%);
     --accent-blue: #0070F3;
     
@@ -110,7 +110,7 @@ activeTab: home
 
   /* Tech Cards (Bento) */
   .tech-card {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.8);
     border: 1px solid var(--border-light);
     border-radius: var(--radius-lg);
     padding: var(--space-xl);
@@ -123,8 +123,9 @@ activeTab: home
 
   .tech-card:hover {
     border-color: var(--border-hover);
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.95);
     transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
   }
 
   /* Service / Portfolio Cards */
@@ -144,14 +145,14 @@ activeTab: home
   .service-card:hover {
     border-color: var(--border-hover);
     background: var(--bg-surface-hover);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   }
 
   .service-icon {
     width: 48px;
     height: 48px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.02);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,9 +184,9 @@ activeTab: home
   }
 
   .tech-btn-primary:hover {
-    background: #ffffff;
+    background: #000000;
     transform: scale(1.02);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
 
   .tech-btn-secondary {
@@ -196,7 +197,7 @@ activeTab: home
 
   .tech-btn-secondary:hover {
     border-color: var(--text-main);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.02);
   }
 
   .tech-btn-gradient {
@@ -228,7 +229,7 @@ activeTab: home
   /* Custom Inputs */
   .tech-input {
     width: 100%;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.02);
     border: 1px solid var(--border-light);
     border-radius: 8px;
     padding: 0.8rem 1rem;
@@ -239,7 +240,7 @@ activeTab: home
   .tech-input:focus {
     outline: none;
     border-color: var(--text-muted);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.04);
   }
 
   /* Header Image styling */
@@ -247,8 +248,8 @@ activeTab: home
     width: 100%;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-light);
-    filter: grayscale(20%) contrast(1.1);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    filter: grayscale(10%) contrast(1.05);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
   }
 </style>
 
@@ -261,7 +262,7 @@ activeTab: home
   <div class="tech-container" style="position: relative; z-index: 2; width: 100%;">
     
     <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-      <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-light); padding: 4px 12px; border-radius: 99px; margin-bottom: var(--space-md);">
+      <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.03); border: 1px solid var(--border-light); padding: 4px 12px; border-radius: 99px; margin-bottom: var(--space-md);">
         <span style="width: 8px; height: 8px; border-radius: 50%; background: #0070F3; box-shadow: 0 0 10px #0070F3;"></span>
         <span class="tech-mono" style="font-size: 0.7rem; color: var(--text-main);">Crofton, MD — Accepting New Patients</span>
       </div>
@@ -387,7 +388,7 @@ activeTab: home
 <!-- 5. MEMBERSHIP / INSURANCE -->
 <section class="tech-section">
   <div class="tech-container">
-    <div class="tech-card" style="background: linear-gradient(135deg, rgba(20,20,20,1) 0%, rgba(5,5,5,1) 100%);">
+    <div class="tech-card" style="background: linear-gradient(135deg, rgba(250,250,250,1) 0%, rgba(240,240,240,1) 100%);">
       <div style="max-width: 600px;">
         <span class="tech-mono">Financial Integration</span>
         <h2 class="tech-heading" style="margin: var(--space-xs) 0 var(--space-md) 0;">Seamless Care Access</h2>
