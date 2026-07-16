@@ -1,466 +1,299 @@
 <!--
-title: Crofton Dental Center | High-Tech Dental Care (Design 3 - Dark Tech)
+title: Crofton Dental Center | High-Tech Dental Care (Design 3 - Square Minimal)
 description: The future of dental wellness. Experience our state-of-the-art Crofton Dental Center portal.
 activeTab: home
 -->
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
   :root {
-    --bg-base: #ffffff;
-    --bg-surface: #fafafa;
-    --bg-surface-hover: #f4f4f5;
-    --border-light: rgba(0, 0, 0, 0.08);
-    --border-hover: rgba(0, 0, 0, 0.2);
-    --text-main: #111111;
-    --text-muted: #666666;
-    --accent-glow: linear-gradient(135deg, #0070F3 0%, #F81CE5 100%);
-    --accent-blue: #0070F3;
-    
-    --radius-md: 12px;
-    --radius-lg: 24px;
-    
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 2.5rem;
-    --space-xl: 4rem;
-    --space-2xl: 6rem;
+    --primary: #3B82F6;
+    --secondary: #8B5CF6;
+    --surface: #FFFFFF;
+    --text: #111827;
+    --text-light: #4B5563;
+    --bg: #F9FAFB;
+    --border: #E5E7EB;
+
+    --rounded-sm: 4px;
+    --rounded-md: 8px;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-24: 96px;
   }
 
   body, #main-content {
-    background-color: var(--bg-base) !important;
-    color: var(--text-main) !important;
-    font-family: 'Inter', -apple-system, sans-serif !important;
-    -webkit-font-smoothing: antialiased;
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
     margin: 0;
     padding: 0;
+    line-height: 1.5;
   }
 
   /* Typography */
-  .tech-display {
-    font-family: 'Space Grotesk', sans-serif !important;
+  .sq-display {
+    font-size: 3.5rem;
     font-weight: 700;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    line-height: 1.05;
-    letter-spacing: -0.04em;
-    margin: 0;
-  }
-  
-  .tech-display-gradient {
-    background: var(--accent-glow);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: var(--space-4);
   }
 
-  .tech-heading {
-    font-family: 'Space Grotesk', sans-serif !important;
+  .sq-heading {
+    font-size: 2rem;
     font-weight: 600;
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
     line-height: 1.2;
     letter-spacing: -0.02em;
-    color: var(--text-main);
+    color: var(--text);
   }
 
-  .tech-mono {
-    font-family: 'JetBrains Mono', monospace !important;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
+  .sq-label {
+    font-family: 'Anonymous Pro', monospace !important;
+    font-size: 0.875rem;
     text-transform: uppercase;
-    color: var(--text-muted);
-    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--primary);
+    font-weight: 700;
+    display: block;
+    margin-bottom: var(--space-2);
   }
 
   /* Layout */
-  .tech-container {
-    max-width: 1200px;
+  .sq-container {
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 var(--space-md);
+    padding: 0 var(--space-6);
   }
 
-  .tech-section {
-    padding: var(--space-2xl) 0;
-    position: relative;
+  .sq-section {
+    padding: var(--space-16) 0;
   }
 
-  /* Glowing Gradients / Background effects */
-  .glow-orb {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0, 112, 243, 0.15) 0%, rgba(0,0,0,0) 70%);
-    top: -200px;
-    right: -200px;
-    z-index: 0;
-    pointer-events: none;
+  /* Components */
+  .sq-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--rounded-md);
+    padding: var(--space-8);
+    transition: transform 0.2s, box-shadow 0.2s;
   }
 
-  .glow-orb-2 {
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, rgba(248, 28, 229, 0.1) 0%, rgba(0,0,0,0) 70%);
-    bottom: -400px;
-    left: -400px;
-    z-index: 0;
-    pointer-events: none;
+  .sq-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.05);
   }
 
-  /* Tech Cards (Bento) */
-  .tech-card {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-  }
-
-  .tech-card:hover {
-    border-color: var(--border-hover);
-    background: rgba(255, 255, 255, 0.95);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-  }
-
-  /* Service / Portfolio Cards */
-  .service-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-md);
-    padding: var(--space-md);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 280px;
-  }
-
-  .service-card:hover {
-    border-color: var(--border-hover);
-    background: var(--bg-surface-hover);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  }
-
-  .service-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.02);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: var(--space-md);
-    border: 1px solid var(--border-light);
-    font-size: 1.5rem;
-  }
-
-  /* Buttons */
-  .tech-btn {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 500;
-    padding: 0.8rem 1.5rem;
-    border-radius: 99px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  .sq-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--rounded-sm);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
     text-decoration: none;
+    transition: all 0.2s;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
-  .tech-btn-primary {
-    background: var(--text-main);
-    color: var(--bg-base);
-    border: none;
+  .sq-btn-primary {
+    background: var(--text);
+    color: var(--surface);
+    border: 1px solid var(--text);
   }
 
-  .tech-btn-primary:hover {
-    background: #000000;
-    transform: scale(1.02);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  .sq-btn-primary:hover {
+    background: var(--primary);
+    border-color: var(--primary);
   }
 
-  .tech-btn-secondary {
+  .sq-btn-outline {
     background: transparent;
-    color: var(--text-main);
-    border: 1px solid var(--border-light);
+    color: var(--text);
+    border: 1px solid var(--border);
   }
 
-  .tech-btn-secondary:hover {
-    border-color: var(--text-main);
-    background: rgba(0, 0, 0, 0.02);
+  .sq-btn-outline:hover {
+    border-color: var(--text);
+    background: var(--surface);
   }
 
-  .tech-btn-gradient {
-    background: var(--bg-base);
-    color: var(--text-main);
-    border: 1px solid transparent;
-    position: relative;
-    background-clip: padding-box;
+  .sq-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+
+  .sq-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .sq-grid-3, .sq-grid-2 {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+    .sq-display { font-size: 2.5rem; }
+  }
+
+  /* Specifics */
+  .sq-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--rounded-sm);
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-4);
+    color: var(--primary);
   }
   
-  .tech-btn-gradient::before {
-    content: '';
-    position: absolute;
-    top: -1px; left: -1px; right: -1px; bottom: -1px;
-    z-index: -1;
-    border-radius: 99px;
-    background: var(--accent-glow);
+  .sq-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
-
-  /* Grid Layouts */
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center; }
-  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
-  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-sm); }
-
-  @media (max-width: 900px) {
-    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: var(--space-md); }
+  .sq-stat-item {
+    padding: var(--space-6);
+    border-right: 1px solid var(--border);
+    text-align: center;
   }
-
-  /* Custom Inputs */
-  .tech-input {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.02);
-    border: 1px solid var(--border-light);
-    border-radius: 8px;
-    padding: 0.8rem 1rem;
-    color: var(--text-main);
-    font-family: 'Inter', sans-serif;
-    transition: all 0.2s;
-  }
-  .tech-input:focus {
-    outline: none;
-    border-color: var(--text-muted);
-    background: rgba(0, 0, 0, 0.04);
-  }
-
-  /* Header Image styling */
-  .tech-hero-img {
-    width: 100%;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border-light);
-    filter: grayscale(10%) contrast(1.05);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  .sq-stat-item:last-child {
+    border-right: none;
   }
 </style>
 
-<!-- BACKGROUND EFFECTS -->
-<div class="glow-orb"></div>
-<div class="glow-orb-2"></div>
-
 <!-- 1. HERO SECTION -->
-<section class="tech-section" style="padding-top: var(--space-xl); min-height: 80vh; display: flex; align-items: center;">
-  <div class="tech-container" style="position: relative; z-index: 2; width: 100%;">
-    
-    <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-      <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.03); border: 1px solid var(--border-light); padding: 4px 12px; border-radius: 99px; margin-bottom: var(--space-md);">
-        <span style="width: 8px; height: 8px; border-radius: 50%; background: #0070F3; box-shadow: 0 0 10px #0070F3;"></span>
-        <span class="tech-mono" style="font-size: 0.7rem; color: var(--text-main);">Crofton, MD — Accepting New Patients</span>
-      </div>
-
-      <h1 class="tech-display" style="margin-bottom: var(--space-md);">
-        The future of <span class="tech-display-gradient">dental care.</span>
+<section class="sq-section" style="padding-top: var(--space-16);">
+  <div class="sq-container">
+    <div style="max-width: 800px;">
+      <span class="sq-label">Crofton, MD</span>
+      <h1 class="sq-display">
+        Refined dental care, <br/>
+        engineered for <span style="color: var(--primary);">excellence.</span>
       </h1>
-      
-      <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
-        Experience precision dentistry engineered for comfort and excellence. Dr. Rahat Sood provides state-of-the-art family, cosmetic, and implant care in an ultra-modern environment.
+      <p style="font-size: 1.25rem; color: var(--text-light); margin-bottom: var(--space-8); max-width: 600px;">
+        Dr. Rahat Sood provides state-of-the-art family, cosmetic, and implant dentistry in a minimal, highly precise clinical environment.
       </p>
-
-      <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-        <button class="tech-btn tech-btn-primary request-btn-drawer">Book Consultation</button>
-        <a href="{{path_prefix}}crofton-experience/" class="tech-btn tech-btn-secondary">Explore Clinic</a>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-<!-- 2. DATA / TRUST METRICS -->
-<section class="tech-section" style="padding: 0 0 var(--space-xl) 0;">
-  <div class="tech-container">
-    <div class="grid-4" style="border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); padding: var(--space-md) 0;">
-      <div style="text-align: center; border-right: 1px solid var(--border-light);">
-        <div class="tech-mono" style="margin-bottom: 4px;">Top Dentist</div>
-        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 600;">Award Winner</div>
-      </div>
-      <div style="text-align: center; border-right: 1px solid var(--border-light);">
-        <div class="tech-mono" style="margin-bottom: 4px;">Technology</div>
-        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 600;">3D CBCT Scans</div>
-      </div>
-      <div style="text-align: center; border-right: 1px solid var(--border-light);">
-        <div class="tech-mono" style="margin-bottom: 4px;">Patient Comfort</div>
-        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 600;">Sedation Options</div>
-      </div>
-      <div style="text-align: center;">
-        <div class="tech-mono" style="margin-bottom: 4px;">Savings Plan</div>
-        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 600;">15% Off Care</div>
+      <div style="display: flex; gap: var(--space-4);">
+        <button class="sq-btn sq-btn-primary request-btn-drawer">Book Consultation</button>
+        <a href="{{path_prefix}}crofton-experience/" class="sq-btn sq-btn-outline">Explore Clinic</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 3. SERVICES (Bento Grid) -->
-<section class="tech-section">
-  <div class="tech-container">
-    <div style="margin-bottom: var(--space-xl);">
-      <h2 class="tech-heading">Clinical Expertise</h2>
-      <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin-top: var(--space-xs);">
-        Precision treatments powered by advanced technology. Explore our specialized care departments.
-      </p>
+<!-- 2. DATA METRICS -->
+<div class="sq-container" style="margin-top: var(--space-8); margin-bottom: var(--space-12);">
+  <div class="sq-stats-row">
+    <div class="sq-stat-item">
+      <div class="sq-label">Recognition</div>
+      <div style="font-size: 1.25rem; font-weight: 700;">Top Dentist</div>
+    </div>
+    <div class="sq-stat-item">
+      <div class="sq-label">Capability</div>
+      <div style="font-size: 1.25rem; font-weight: 700;">3D CBCT</div>
+    </div>
+    <div class="sq-stat-item">
+      <div class="sq-label">Comfort</div>
+      <div style="font-size: 1.25rem; font-weight: 700;">Sedation</div>
+    </div>
+    <div class="sq-stat-item">
+      <div class="sq-label">Membership</div>
+      <div style="font-size: 1.25rem; font-weight: 700;">15% Off</div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. SERVICES GRID -->
+<section class="sq-section">
+  <div class="sq-container">
+    <div style="margin-bottom: var(--space-12);">
+      <span class="sq-label">Clinical Departments</span>
+      <h2 class="sq-heading">Specialized Care</h2>
     </div>
 
-    <div class="grid-3">
-      
+    <div class="sq-grid-3">
       <!-- Cosmetic -->
-      <div class="service-card" onclick="window.location.href='{{path_prefix}}cosmetic-dentistry/'">
-        <div>
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 24px; height: 24px; color: var(--accent-blue);"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" /></svg></div>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 600; margin: 0 0 8px 0;">Cosmetic Redesign</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">
-            Veneers, teeth whitening, and complete smile makeovers crafted with precision.
-          </p>
+      <a href="{{path_prefix}}cosmetic-dentistry/" style="text-decoration: none; color: inherit;" class="sq-card">
+        <div class="sq-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 24px; height: 24px;"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" /></svg>
         </div>
-        <div class="tech-mono" style="margin-top: var(--space-md); color: var(--text-main);">View Cosmetic &rarr;</div>
-      </div>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-2);">Cosmetic Redesign</h3>
+        <p style="color: var(--text-light); margin-bottom: var(--space-4);">Veneers, teeth whitening, and complete smile makeovers crafted with precision.</p>
+        <span class="sq-label" style="color: var(--text);">Explore &rarr;</span>
+      </a>
 
       <!-- Implants -->
-      <div class="service-card" onclick="window.location.href='{{path_prefix}}dental-implants/'">
-        <div>
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 24px; height: 24px; color: var(--accent-blue);"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg></div>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 600; margin: 0 0 8px 0;">Dental Implants</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">
-            Permanent restoration for missing teeth using 3D guided surgery and All-on-4® techniques.
-          </p>
+      <a href="{{path_prefix}}dental-implants/" style="text-decoration: none; color: inherit;" class="sq-card">
+        <div class="sq-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 24px; height: 24px;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
         </div>
-        <div class="tech-mono" style="margin-top: var(--space-md); color: var(--text-main);">View Implants &rarr;</div>
-      </div>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-2);">Dental Implants</h3>
+        <p style="color: var(--text-light); margin-bottom: var(--space-4);">Permanent restoration using 3D guided surgery and All-on-4® techniques.</p>
+        <span class="sq-label" style="color: var(--text);">Explore &rarr;</span>
+      </a>
 
-      <!-- Orthodontics -->
-      <div class="service-card" onclick="window.location.href='{{path_prefix}}orthodontics/invisalign/'">
-        <div>
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 24px; height: 24px; color: var(--accent-blue);"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg></div>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 600; margin: 0 0 8px 0;">Invisalign®</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">
-            Invisible aligner therapy mapped with digital scanning for optimal bite correction.
-          </p>
+      <!-- Ortho -->
+      <a href="{{path_prefix}}orthodontics/invisalign/" style="text-decoration: none; color: inherit;" class="sq-card">
+        <div class="sq-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 24px; height: 24px;"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>
         </div>
-        <div class="tech-mono" style="margin-top: var(--space-md); color: var(--text-main);">View Ortho &rarr;</div>
-      </div>
-
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-2);">Invisalign®</h3>
+        <p style="color: var(--text-light); margin-bottom: var(--space-4);">Invisible aligner therapy mapped with digital scanning for optimal correction.</p>
+        <span class="sq-label" style="color: var(--text);">Explore &rarr;</span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- 4. DOCTOR HIGHLIGHT (Split Bento) -->
-<section class="tech-section">
-  <div class="tech-container">
-    <div class="tech-card">
-      <div class="grid-2">
-        <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-light);">
-          <img src="{{path_prefix}}assets/dr_rahat_sood.png" alt="Dr. Sood" style="width: 100%; display: block; opacity: 0.9;">
-        </div>
-        <div>
-          <span class="tech-mono" style="color: #F81CE5;">Lead Physician</span>
-          <h2 class="tech-heading" style="margin: var(--space-xs) 0 var(--space-sm) 0;">Dr. Rahat Sood, DMD</h2>
-          <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-md);">
-            Graduating with high honors from the Boston University Henry M. Goldman School of Dental Medicine, Dr. Sood combines advanced clinical capability with a highly personalized approach to patient comfort. She has been featured as a dental expert on CNN Headline News, FOX News, and CNBC.
-          </p>
-          <ul style="list-style: none; padding: 0; margin: 0 0 var(--space-lg) 0; color: var(--text-muted); font-size: 0.9rem; display: flex; flex-direction: column; gap: 8px;">
-            <li style="display: flex; align-items: center; gap: 8px;"><span style="color: var(--text-main);">+</span> ADA Member</li>
-            <li style="display: flex; align-items: center; gap: 8px;"><span style="color: var(--text-main);">+</span> MSDA Member</li>
-          </ul>
-          <a href="{{path_prefix}}about-us/meet-dr-rahat-sood/" class="tech-btn tech-btn-secondary">Read Full Bio</a>
-        </div>
-      </div>
+<!-- 4. DOCTOR -->
+<section class="sq-section" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="sq-container sq-grid-2">
+    <div>
+      <img src="{{path_prefix}}assets/dr_rahat_sood.png" alt="Dr. Sood" style="width: 100%; border-radius: var(--rounded-md); display: block; border: 1px solid var(--border);">
+    </div>
+    <div>
+      <span class="sq-label">Lead Physician</span>
+      <h2 class="sq-heading" style="margin-bottom: var(--space-4);">Dr. Rahat Sood, DMD</h2>
+      <p style="color: var(--text-light); margin-bottom: var(--space-6);">
+        Graduating with high honors from the Boston University Henry M. Goldman School of Dental Medicine, Dr. Sood combines advanced clinical capability with a highly personalized approach to patient comfort. Featured on CNN, FOX, and CNBC.
+      </p>
+      <a href="{{path_prefix}}about-us/meet-dr-rahat-sood/" class="sq-btn sq-btn-outline">Read Full Bio</a>
     </div>
   </div>
 </section>
 
-<!-- 5. MEMBERSHIP / INSURANCE -->
-<section class="tech-section">
-  <div class="tech-container">
-    <div class="tech-card" style="background: linear-gradient(135deg, rgba(250,250,250,1) 0%, rgba(240,240,240,1) 100%);">
+<!-- 5. MEMBERSHIP -->
+<section class="sq-section">
+  <div class="sq-container">
+    <div class="sq-card" style="background: var(--text); color: var(--surface);">
       <div style="max-width: 600px;">
-        <span class="tech-mono">Financial Integration</span>
-        <h2 class="tech-heading" style="margin: var(--space-xs) 0 var(--space-md) 0;">Seamless Care Access</h2>
-        <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-lg);">
-          We accept most major insurances and file claims digitally on your behalf. Don't have insurance? Join our <strong>Smile Club Membership</strong> to bypass deductibles, waiting periods, and paperwork, while receiving an instant 15% discount on all procedures.
+        <span class="sq-label" style="color: var(--secondary);">Financial Integration</span>
+        <h2 class="sq-heading" style="color: var(--surface); margin-bottom: var(--space-4);">Seamless Care Access</h2>
+        <p style="color: #9CA3AF; margin-bottom: var(--space-8);">
+          We accept most major insurances and file claims digitally. No insurance? Join our Smile Club Membership to bypass deductibles and receive a 15% discount on all procedures.
         </p>
-        <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap;">
-          <a href="{{path_prefix}}crofton-dental-center-smile-club/" class="tech-btn tech-btn-gradient">View Smile Club</a>
-          <a href="{{path_prefix}}payment-options/" class="tech-btn tech-btn-secondary">Insurance Info</a>
+        <div style="display: flex; gap: var(--space-4);">
+          <a href="{{path_prefix}}crofton-dental-center-smile-club/" class="sq-btn" style="background: var(--surface); color: var(--text);">View Smile Club</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- 6. FAST CONTACT / FOOTER -->
-<section class="tech-section" style="border-top: 1px solid var(--border-light);">
-  <div class="tech-container">
-    <div class="grid-2">
-      <div>
-        <h2 class="tech-heading" style="margin: 0 0 var(--space-sm) 0;">Connect directly.</h2>
-        <p style="color: var(--text-muted); margin-bottom: var(--space-lg);">
-          Our scheduling interface is available. Let us know how we can assist you.
-        </p>
-        <form class="Polaris-FormLayout" id="tech-contact">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); margin-bottom: var(--space-sm);">
-            <input type="text" class="tech-input" placeholder="Name" required>
-            <input type="email" class="tech-input" placeholder="Email" required>
-          </div>
-          <textarea class="tech-input" rows="3" placeholder="Message" style="margin-bottom: var(--space-sm);" required></textarea>
-          <button type="submit" class="tech-btn tech-btn-primary" style="width: 100%;">Send Inquiry</button>
-        </form>
-        <div id="tech-contact-success" style="display: none; padding: var(--space-sm); background: rgba(0, 112, 243, 0.1); border: 1px solid rgba(0, 112, 243, 0.3); border-radius: 8px; margin-top: var(--space-md); color: #0070F3; font-size: 0.9rem;">
-          Transmission received. We will respond shortly.
-        </div>
-      </div>
-
-      <div style="padding-left: var(--space-xl); border-left: 1px solid var(--border-light);">
-        <div class="tech-mono" style="margin-bottom: var(--space-xs);">Location Data</div>
-        <p style="color: var(--text-main); font-size: 1.1rem; line-height: 1.5; margin: 0 0 var(--space-lg) 0;">
-          1664 Village Green<br>
-          Crofton, MD 21114<br>
-          <span style="color: var(--text-muted); font-size: 0.9rem;">Opposite Crofton Country Club</span>
-        </p>
-
-        <div class="tech-mono" style="margin-bottom: var(--space-xs);">Comms Channel</div>
-        <p style="color: var(--text-main); font-size: 1.1rem; line-height: 1.5; margin: 0;">
-          P: <a href="tel:301-261-3800" style="color: var(--text-main); text-decoration: none;">301-261-3800</a><br>
-          E: <a href="mailto:info@croftondentalcenter.com" style="color: var(--text-main); text-decoration: none;">info@croftondentalcenter.com</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const techForm = document.getElementById("tech-contact");
-    const successMsg = document.getElementById("tech-contact-success");
-
-    if (techForm && successMsg) {
-      techForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const btn = techForm.querySelector("button");
-        btn.textContent = "Processing...";
-        btn.disabled = true;
-
-        setTimeout(() => {
-          techForm.style.display = "none";
-          successMsg.style.display = "block";
-        }, 800);
-      });
-    }
-  });
-</script>
