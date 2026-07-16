@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dentist Crofton, MD | Crofton Dental Center (Design 2 - Glassmorphism) | Dr. Rahat Sood</title>
-  <meta name="description" content="Experience our modern, high-contrast Glassmorphism design concept. Learn about our luxury family and cosmetic dentistry services in Crofton, MD.">
+  <title>Dentist Crofton, MD | Crofton Dental Center (Design 2 - Refined Studio) | Dr. Rahat Sood</title>
+  <meta name="description" content="Experience our elite, studio-designed dental wellness portal. Sophisticated family, cosmetic, and implant dentistry in Crofton, MD.">
   
   <!-- Favicon placeholder or clean SVGs -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%232B909D%22/></svg>">
@@ -285,599 +285,413 @@
   <!-- Primary Page Content Area Inject -->
   <main id="main-content" role="main">
     <style>
-  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-  /* Global Class Overrides for Design 2 */
+  /* AAA Studio Styling Foundations */
   #main-content {
-    background: transparent !important;
-    position: relative;
+    background-color: #FAF9F5 !important; /* Soft luxury warm-cream backdrop */
+    color: #1A2E26 !important; /* Deep forest charcoal for high-contrast elite reading */
     font-family: 'Plus Jakarta Sans', sans-serif !important;
   }
+
+  /* Typography Scale */
+  .studio-display {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #13271F;
+  }
   
-  /* Luminous Background Blobs */
-  .glass-bg-blobs {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -2;
-    overflow: hidden;
-    background: radial-gradient(circle at 50% 50%, #f0f7f8 0%, #d5e4e7 100%);
+  .studio-display em {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-style: italic;
+    font-weight: 400;
   }
 
-  .blob {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(110px);
-    opacity: 0.6;
-    animation: floatBlob 22s infinite ease-in-out;
+  .studio-heading {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #13271F;
   }
 
-  .blob-1 {
-    width: 650px;
-    height: 650px;
-    background: radial-gradient(circle, rgba(24, 86, 255, 0.4) 0%, rgba(24, 86, 255, 0) 70%);
-    top: -15%;
-    left: -10%;
+  .studio-mono {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #C5A880; /* Refined Gold Accent */
+    font-weight: 500;
   }
 
-  .blob-2 {
-    width: 750px;
-    height: 750px;
-    background: radial-gradient(circle, rgba(86, 185, 197, 0.4) 0%, rgba(86, 185, 197, 0) 70%);
-    bottom: -15%;
-    right: -10%;
-    animation-delay: -5s;
+  /* Luxury Grid & Layout Elements */
+  .studio-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
   }
 
-  .blob-3 {
-    width: 550px;
-    height: 550px;
-    background: radial-gradient(circle, rgba(232, 149, 88, 0.25) 0%, rgba(232, 149, 88, 0) 70%);
-    top: 35%;
-    left: 20%;
-    animation-delay: -10s;
+  .studio-section {
+    padding: var(--space-3xl) 0;
+    border-bottom: 1px solid rgba(19, 39, 31, 0.06);
   }
 
-  .blob-4 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(7, 202, 107, 0.22) 0%, rgba(7, 202, 107, 0) 70%);
-    top: 15%;
-    right: 15%;
-    animation-delay: -15s;
-  }
-
-  @keyframes floatBlob {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(45px, -55px) scale(1.06); }
-    66% { transform: translate(-35px, 35px) scale(0.94); }
-  }
-
-  /* Frosted Glass Panels */
-  .glass-card {
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    border-radius: 24px;
-    box-shadow: 0 10px 40px -10px rgba(31, 38, 135, 0.07);
+  /* Studio Cards & Bento Grid */
+  .studio-card {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(19, 39, 31, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(19, 39, 31, 0.015);
+    padding: var(--space-xl);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
   }
 
-  .glass-card:hover {
-    background: rgba(255, 255, 255, 0.55);
-    border-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 20px 50px -10px rgba(31, 38, 135, 0.12);
+  .studio-card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(19, 39, 31, 0.04);
+    border-color: rgba(197, 168, 128, 0.3); /* Subtle gold border on hover */
   }
 
-  /* Interactive Elements */
-  .glass-btn {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.95rem;
-    padding: 0.75rem 1.75rem;
-    border-radius: 12px;
-    border: 1px solid rgba(24, 86, 255, 0.35);
-    background: rgba(255, 255, 255, 0.3);
-    color: #1856FF;
-    backdrop-filter: blur(8px);
+  /* Interactive Offerings Card */
+  .offering-card {
+    position: relative;
+    height: 420px;
+    border-radius: 16px;
+    overflow: hidden;
     cursor: pointer;
-    transition: all 0.3s ease;
+    border: 1px solid rgba(19, 39, 31, 0.05);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .offering-card__bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+  }
+
+  .offering-card__overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(250, 249, 245, 0.85) 0%, rgba(250, 249, 245, 0.98) 100%);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 2;
+  }
+
+  .offering-card__content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-xl);
+  }
+
+  /* Offering Card Hover States */
+  .offering-card:hover .offering-card__bg {
+    transform: scale(1.08);
+  }
+
+  .offering-card:hover .offering-card__overlay {
+    background: linear-gradient(to bottom, rgba(19, 39, 31, 0.75) 0%, rgba(19, 39, 31, 0.95) 100%);
+  }
+
+  .offering-card:hover .offering-card__content h3 {
+    color: #FFFFFF;
+  }
+
+  .offering-card:hover .offering-card__content p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .offering-card:hover .offering-card__content .studio-mono {
+    color: #C5A880;
+  }
+
+  /* Buttons designed by AAA Studio */
+  .studio-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 1rem 2.25rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: var(--space-xs);
   }
 
-  .glass-btn:hover {
-    background: #1856FF;
-    color: #FFFFFF;
-    border-color: #1856FF;
-    box-shadow: 0 8px 24px rgba(24, 86, 255, 0.25);
+  .studio-btn-primary {
+    background-color: #13271F; /* Deep forest green */
+    color: #FAF9F5;
+    border: 1px solid #13271F;
+  }
+
+  .studio-btn-primary:hover {
+    background-color: #C5A880; /* Warm gold */
+    border-color: #C5A880;
+    color: #13271F;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(197, 168, 128, 0.2);
+  }
+
+  .studio-btn-secondary {
+    background-color: transparent;
+    color: #13271F;
+    border: 1px solid rgba(19, 39, 31, 0.15);
+  }
+
+  .studio-btn-secondary:hover {
+    background-color: rgba(19, 39, 31, 0.03);
+    border-color: #13271F;
     transform: translateY(-2px);
   }
 
-  .glass-btn-primary {
-    background: rgba(24, 86, 255, 0.85);
-    color: #FFFFFF;
-    border-color: rgba(24, 86, 255, 0.85);
-    box-shadow: 0 8px 32px rgba(24, 86, 255, 0.15);
+  .studio-btn-light {
+    background-color: #FAF9F5;
+    color: #13271F;
+    border: 1px solid #FAF9F5;
   }
 
-  .glass-btn-primary:hover {
-    background: #1856FF;
-    box-shadow: 0 12px 32px rgba(24, 86, 255, 0.3);
+  .studio-btn-light:hover {
+    background-color: #C5A880;
+    border-color: #C5A880;
+    color: #13271F;
+    transform: translateY(-2px);
   }
 
-  /* Glass Flip Cards */
-  .glass-flip-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: var(--space-xl);
-    margin-top: var(--space-2xl);
+  /* Custom FAQ Accordions */
+  .studio-faq {
+    border-top: 1px solid rgba(19, 39, 31, 0.08);
   }
 
-  .glass-flip-card {
-    perspective: 1000px;
-    height: 380px;
+  .studio-faq-item {
+    border-bottom: 1px solid rgba(19, 39, 31, 0.08);
+    padding: var(--space-lg) 0;
   }
 
-  .glass-flip-card-inner {
-    position: relative;
+  .studio-faq-header {
     width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    transform-style: preserve-3d;
-    cursor: pointer;
-  }
-
-  .glass-flip-card:hover .glass-flip-card-inner,
-  .glass-flip-card:focus-within .glass-flip-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .glass-flip-card-front, .glass-flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: var(--space-xl);
-  }
-
-  .glass-flip-card-front {
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    box-shadow: 0 10px 30px -10px rgba(31, 38, 135, 0.05);
-  }
-
-  .glass-flip-card-back {
-    background-size: cover;
-    background-position: center;
-    transform: rotateY(180deg);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    overflow: hidden;
-  }
-
-  .glass-flip-card-back::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(24, 86, 255, 0.8);
-    backdrop-filter: blur(15px);
-    border-radius: 23px;
-    z-index: 1;
-  }
-
-  .glass-flip-card-back-content {
-    position: relative;
-    z-index: 2;
-    color: #FFFFFF;
-    padding: var(--space-md);
-  }
-
-  /* Slider Customizations */
-  .hero-glass-slider {
-    position: relative;
-    min-height: 680px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    padding: var(--space-3xl) 0;
-  }
-
-  .hero-glass-slide {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.8s ease, visibility 0.8s ease;
-    z-index: 1;
-  }
-
-  .hero-glass-slide.active {
-    opacity: 1;
-    visibility: visible;
-    z-index: 2;
-  }
-
-  .hero-glass-card {
-    background: rgba(255, 255, 255, 0.42);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 32px;
-    padding: var(--space-2xl);
-    box-shadow: 0 20px 60px -15px rgba(31, 38, 135, 0.08);
-    max-width: 620px;
-  }
-
-  .glass-img-frame {
-    border-radius: 28px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 15px 45px -10px rgba(31, 38, 135, 0.1);
-  }
-
-  /* Stats card list */
-  .stats-glass-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: var(--space-lg);
-    text-align: center;
-  }
-
-  .stat-glass-card {
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 20px;
-    padding: var(--space-xl) var(--space-md);
-  }
-
-  /* Accordion styles */
-  .glass-accordion-item {
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 16px;
-    margin-bottom: var(--space-md);
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-
-  .glass-accordion-item.active {
-    background: rgba(255, 255, 255, 0.5);
-    border-color: rgba(24, 86, 255, 0.3);
-  }
-
-  .glass-accordion-title {
-    width: 100%;
-    padding: var(--space-lg);
     background: transparent;
     border: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 600;
-    color: var(--color-text-dark);
-    font-size: 1.05rem;
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #13271F;
     cursor: pointer;
     text-align: left;
+    padding: 0;
   }
 
-  .glass-accordion-content {
+  .studio-faq-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    padding: 0 var(--space-lg);
-    color: var(--color-text-light);
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    color: rgba(26, 46, 38, 0.8);
     font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 0;
+  }
+  
+  .studio-faq-content p {
+    padding-top: var(--space-md);
+    margin: 0;
   }
 
-  /* Insurance Overlay */
-  .glass-insurance-section {
+  /* Custom Form inputs */
+  .studio-input {
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(19, 39, 31, 0.1);
+    border-radius: 8px;
+    padding: 0.875rem 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #13271F;
+    transition: all 0.3s ease;
+  }
+
+  .studio-input:focus {
+    outline: none;
+    border-color: #C5A880;
+    box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.12);
+  }
+
+  /* Premium Image Frame */
+  .studio-img-frame {
     position: relative;
-    background-size: cover;
-    background-position: center;
-    border-radius: 32px;
+    border-radius: 20px;
     overflow: hidden;
-    margin: var(--space-3xl) 0;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 20px 50px -15px rgba(31, 38, 135, 0.1);
+    box-shadow: 0 20px 50px rgba(19, 39, 31, 0.05);
   }
 
-  .glass-insurance-section::before {
+  .studio-img-frame::after {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, rgba(20, 20, 20, 0.7) 0%, rgba(20, 20, 20, 0.4) 100%);
-    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    pointer-events: none;
   }
 
-  .glass-insurance-content {
-    position: relative;
-    z-index: 2;
-    padding: var(--space-3xl);
-    max-width: 600px;
-    color: #FFFFFF;
+  /* Static Grid Alignment */
+  .studio-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
   }
 
-  .glass-label-caps {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #1856FF;
-    font-weight: 600;
-    display: block;
-    margin-bottom: var(--space-xs);
-  }
-  
-  .glass-label-caps-light {
-    color: #56B9C5;
+  .studio-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
   }
 
-  /* Responsive Adjustments */
   @media (max-width: 990px) {
-    .hero-glass-slider {
-      min-height: auto;
-      padding: var(--space-2xl) 0;
+    .studio-grid-2, .studio-grid-3 {
+      grid-template-columns: 1fr;
+      gap: var(--space-2xl);
     }
-    .hero-glass-slide {
-      position: relative;
-      display: none;
-      flex-direction: column-reverse;
-      gap: var(--space-xl);
-    }
-    .hero-glass-slide.active {
-      display: flex;
-    }
-    .hero-glass-card {
-      max-width: 100%;
-    }
-    .glass-insurance-content {
-      padding: var(--space-2xl) var(--space-lg);
+    .studio-display {
+      font-size: 2.75rem;
     }
   }
 </style>
 
-<div class="glass-bg-blobs">
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
-  <div class="blob blob-4"></div>
-</div>
 
-
-<section class="hero-glass-slider">
-  
-  
-  <div class="hero-glass-slide hero-glass-slide-1 active">
-    <div class="container">
-      <div class="split-section" style="align-items: center; gap: var(--space-3xl);">
-        <div class="hero-glass-card">
-          <span class="glass-label-caps">Where Health & Happiness Meet</span>
-          <h1 style="font-weight: 800; font-size: 2.75rem; line-height: 1.15; color: var(--color-text-dark); margin-bottom: var(--space-md);">Sophisticated Dental Care Designed for Families</h1>
-          <p style="font-size: 1.05rem; color: var(--color-text-light); line-height: 1.6; margin-bottom: var(--space-xl);">Crofton Dental Center offers premium family and cosmetic dentistry in a relaxing, luxury environment. We make regular dental wellness comfortable for all ages.</p>
-          <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-            <button class="glass-btn glass-btn-primary request-btn-drawer">Request Appointment</button>
-            <a href="./crofton-experience/" class="glass-btn">Explore The Experience</a>
-          </div>
-        </div>
-        <div style="flex: 1; display: flex; justify-content: center;">
-          <div class="glass-img-frame" style="max-width: 480px; width: 100%;">
-            <img src="./assets/family_dentistry_hero.png" alt="Sophisticated Dental Care for Families" style="width: 100%; display: block;">
-          </div>
+<section class="studio-section" style="padding-top: var(--space-3xl); padding-bottom: var(--space-3xl);">
+  <div class="studio-container">
+    <div class="studio-grid-2">
+      <div>
+        <span class="studio-mono">Crofton Dental Center</span>
+        <h1 class="studio-display" style="margin-top: var(--space-sm); margin-bottom: var(--space-lg);">
+          Sophisticated dental care <em>designed</em> for your family’s wellness.
+        </h1>
+        <p style="font-size: 1.1rem; line-height: 1.7; color: rgba(26, 46, 38, 0.85); margin-bottom: var(--space-xl); max-width: 520px;">
+          Dr. Rahat Sood offers premium family, cosmetic, and implant dentistry within an elegant, relaxing environment. Experience dental visits defined by absolute comfort and clinical excellence.
+        </p>
+        <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+          <button class="studio-btn studio-btn-primary request-btn-drawer">Request Appointment</button>
+          <a href="./crofton-experience/" class="studio-btn studio-btn-secondary">Explore The Experience</a>
         </div>
       </div>
-    </div>
-  </div>
-
-  
-  <div class="hero-glass-slide hero-glass-slide-2">
-    <div class="container">
-      <div class="split-section" style="align-items: center; gap: var(--space-3xl);">
-        <div class="hero-glass-card">
-          <span class="glass-label-caps">Smile Artistry</span>
-          <h1 style="font-weight: 800; font-size: 2.75rem; line-height: 1.15; color: var(--color-text-dark); margin-bottom: var(--space-md);">Revitalize Your Smile with Cosmetic Artistry</h1>
-          <p style="font-size: 1.05rem; color: var(--color-text-light); line-height: 1.6; margin-bottom: var(--space-xl);">Transform chipped, stained, or gapped teeth with porcelain veneers, snap-on smiles, teeth whitening, and cosmetic Botox® wrinkle and TMJ solutions.</p>
-          <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-            <button class="glass-btn glass-btn-primary request-btn-drawer">Book Consultation</button>
-            <a href="./cosmetic-dentistry/" class="glass-btn">View Cosmetic Care</a>
-          </div>
+      <div style="display: flex; justify-content: center;">
+        <div class="studio-img-frame" style="max-width: 520px; width: 100%;">
+          <img src="./assets/family_dentistry_hero.png" alt="Family Dental Wellness in Crofton" style="width: 100%; display: block; filter: contrast(1.02) saturate(0.95);">
         </div>
-        <div style="flex: 1; display: flex; justify-content: center;">
-          <div class="glass-img-frame" style="max-width: 480px; width: 100%;">
-            <img src="./assets/cosmetic_dentistry_hero.png" alt="Cosmetic Smile Artistry" style="width: 100%; display: block;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-  <div class="hero-glass-slide hero-glass-slide-3">
-    <div class="container">
-      <div class="split-section" style="align-items: center; gap: var(--space-3xl);">
-        <div class="hero-glass-card">
-          <span class="glass-label-caps">Guided Precision</span>
-          <h1 style="font-weight: 800; font-size: 2.75rem; line-height: 1.15; color: var(--color-text-dark); margin-bottom: var(--space-md);">Permanent Restorations & Sedation Comfort</h1>
-          <p style="font-size: 1.05rem; color: var(--color-text-light); line-height: 1.6; margin-bottom: var(--space-xl);">Replace missing teeth permanently. We offer All-on-4® implants, mini implants, and oral conscious sedation to guarantee a relaxing, painless procedure.</p>
-          <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-            <button class="glass-btn glass-btn-primary request-btn-drawer">Book Implants Consult</button>
-            <a href="./dental-implants/" class="glass-btn">Explore Implants</a>
-          </div>
-        </div>
-        <div style="flex: 1; display: flex; justify-content: center;">
-          <div class="glass-img-frame" style="max-width: 480px; width: 100%;">
-            <img src="./assets/dental_implants_hero.png" alt="Dental Implants and Restorations" style="width: 100%; display: block;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-  <div class="slider-dots" style="bottom: 24px; z-index: 10;">
-    <button class="slider-dot active" aria-label="Go to slide 1" style="background-color: var(--color-primary);"></button>
-    <button class="slider-dot" aria-label="Go to slide 2" style="background-color: var(--color-primary);"></button>
-    <button class="slider-dot" aria-label="Go to slide 3" style="background-color: var(--color-primary);"></button>
-  </div>
-
-</section>
-
-
-<section class="section-padding" style="padding: var(--space-xl) 0;">
-  <div class="container">
-    <div class="stats-glass-grid">
-      <div class="stat-glass-card glass-card">
-        <h2 style="font-weight: 800; font-size: 2.25rem; color: #1856FF; margin-bottom: 4px;">TOP DENTIST</h2>
-        <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-light); margin: 0;">Clinical Recognition</p>
-      </div>
-      <div class="stat-glass-card glass-card">
-        <h2 style="font-weight: 800; font-size: 2.25rem; color: #1856FF; margin-bottom: 4px;">3D CBCT</h2>
-        <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-light); margin: 0;">Guided Navigation</p>
-      </div>
-      <div class="stat-glass-card glass-card">
-        <h2 style="font-weight: 800; font-size: 2.25rem; color: #1856FF; margin-bottom: 4px;">15% OFF</h2>
-        <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-light); margin: 0;">Smile Club Savings</p>
-      </div>
-      <div class="stat-glass-card glass-card">
-        <h2 style="font-weight: 800; font-size: 2.25rem; color: #1856FF; margin-bottom: 4px;">0% WORRY</h2>
-        <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-light); margin: 0;">Sedation Comfort</p>
       </div>
     </div>
   </div>
 </section>
 
 
-<section class="section-padding">
-  <div class="container">
-    <div class="text-center" style="max-width: 700px; margin: 0 auto var(--space-2xl) auto;">
-      <span class="glass-label-caps">Hover to Reveal Details</span>
-      <h2 style="font-weight: 800; margin-bottom: var(--space-xs);">Specialized Treatment Portfolios</h2>
-      <p style="color: var(--color-text-light);">Hover or tap our cards to explore our core dental feature areas, custom treatments, and direct access pathways.</p>
+<section class="studio-section" style="padding: var(--space-xl) 0; background-color: #FFFFFF;">
+  <div class="studio-container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-xl); text-align: center;">
+      <div>
+        <span class="studio-mono">clinical recognition</span>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; font-weight: 500; color: #13271F; margin: 4px 0 0 0;">TOP DENTIST</h2>
+      </div>
+      <div>
+        <span class="studio-mono">advanced imaging</span>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; font-weight: 500; color: #13271F; margin: 4px 0 0 0;">3D CBCT SCAN</h2>
+      </div>
+      <div>
+        <span class="studio-mono">exclusive membership</span>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; font-weight: 500; color: #13271F; margin: 4px 0 0 0;">15% OFF SAVINGS</h2>
+      </div>
+      <div>
+        <span class="studio-mono">patient comfort</span>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; font-weight: 500; color: #13271F; margin: 4px 0 0 0;">SEDATION CARE</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="studio-section">
+  <div class="studio-container">
+    <div style="max-width: 680px; margin-bottom: var(--space-3xl);">
+      <span class="studio-mono">specialized care</span>
+      <h2 class="studio-heading" style="margin-top: var(--space-xs); margin-bottom: var(--space-sm);">Clinical Portfolios & Treatments</h2>
+      <p style="color: rgba(26, 46, 38, 0.8); line-height: 1.6; margin: 0;">Explore our core dental feature areas. Hover over each specialty to reveal diagnostic summaries and direct access pathways.</p>
     </div>
 
-    <div class="glass-flip-card-grid">
+    <div class="studio-grid-2" style="gap: var(--space-xl);">
       
       
-      <div class="glass-flip-card" tabindex="0">
-        <div class="glass-flip-card-inner">
-          <div class="glass-flip-card-front">
-            <svg class="flip-card-front__icon" viewBox="6 6 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 56px; height: 56px; margin-bottom: var(--space-md);">
-              <defs>
-                <linearGradient id="familyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#1856FF"/>
-                  <stop offset="100%" stop-color="#2B909D"/>
-                </linearGradient>
-              </defs>
-              <circle cx="32" cy="32" r="28" fill="rgba(24, 86, 255, 0.1)"/>
-              <path d="M32 12c-7 0-11 5-11 12 0 6 1.5 8 3 10.5 1.5 2.5 2.5 5.5 2.5 9.5 0 3 2.5 5 5.5 5s2.5-.5 3-2c.5 1.5 1.5 2 3 2 3 0 5.5-2 5.5-5 0-4 1-7 2.5-9.5 1.5-2.5 3-4.5 3-10.5 0-7-4-12-11-12z" fill="url(#familyGrad)"/>
-              <path d="M26 18c-2 2-3 5-3 8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            <h3 style="font-weight: 700; font-size: 1.35rem; margin-bottom: var(--space-sm);">Family Dentistry</h3>
-            <p style="font-size: 0.925rem; color: var(--color-text-light); line-height: 1.5; margin: 0;">Gentle scaling cleanings, diagnostics, and fluoride treatments designed to protect all ages.</p>
+      <div class="offering-card" onclick="window.location.href='./family-dentistry/'">
+        <div class="offering-card__bg" style="background-image: url('./assets/family_dentistry_bg.png');"></div>
+        <div class="offering-card__overlay"></div>
+        <div class="offering-card__content">
+          <div>
+            <span class="studio-mono">wellness foundations</span>
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; font-weight: 500; color: #13271F; margin-top: 4px; transition: color 0.3s;">Family & Preventive Care</h3>
           </div>
-          <div class="glass-flip-card-back" style="background-image: url('./assets/family_dentistry_bg.png');">
-            <div class="glass-flip-card-back-content">
-              <h3 style="color: #FFFFFF; font-weight: 700; font-size: 1.35rem; margin-bottom: var(--space-md);">Family Care</h3>
-              <p style="font-size: 0.9rem; margin-bottom: var(--space-lg); line-height: 1.4;">Comprehensive wellness, cavity prevention, and custom cleanings for kids and adults.</p>
-              <a href="./family-dentistry/" class="glass-btn glass-btn-primary" style="width: 100%;">Explore Family Care</a>
-            </div>
+          <div>
+            <p style="color: rgba(26, 46, 38, 0.85); font-size: 0.95rem; line-height: 1.5; margin-bottom: var(--space-md); transition: color 0.3s;">Gentle scaling cleanings, digital diagnostic imaging, and protective fluoride therapies designed for all ages.</p>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-decoration: underline; color: #C5A880; font-weight: 500;">EXPLORE WELLNESS &rarr;</span>
           </div>
         </div>
       </div>
 
       
-      <div class="glass-flip-card" tabindex="0">
-        <div class="glass-flip-card-inner">
-          <div class="glass-flip-card-front">
-            <svg class="flip-card-front__icon" viewBox="6 6 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 56px; height: 56px; margin-bottom: var(--space-md);">
-              <defs>
-                <linearGradient id="cosmeticGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#FFD700"/>
-                  <stop offset="100%" stop-color="#E89558"/>
-                </linearGradient>
-              </defs>
-              <circle cx="32" cy="32" r="28" fill="rgba(232, 149, 88, 0.1)"/>
-              <path d="M32 12c-7 0-11 5-11 12 0 6 1.5 8 3 10.5 1.5 2.5 2.5 5.5 2.5 9.5 0 3 2.5 5 5.5 5s2.5-.5 3-2c.5 1.5 1.5 2 3 2 3 0 5.5-2 5.5-5 0-4 1-7 2.5-9.5 1.5-2.5 3-4.5 3-10.5 0-7-4-12-11-12z" fill="url(#familyGrad)"/>
-              <path d="M46 16l2.5 5.5L54 24l-5.5 2.5L46 32l-2.5-5.5L38 24l5.5-2.5z" fill="url(#cosmeticGrad)"/>
-            </svg>
-            <h3 style="font-weight: 700; font-size: 1.35rem; margin-bottom: var(--space-sm);">Cosmetic Artistry</h3>
-            <p style="font-size: 0.925rem; color: var(--color-text-light); line-height: 1.5; margin: 0;">Veneers, teeth whitening, bonding, snap-on smiles, and facial aesthetic Botox®.</p>
+      <div class="offering-card" onclick="window.location.href='./cosmetic-dentistry/'">
+        <div class="offering-card__bg" style="background-image: url('./assets/cosmetic_dentistry_bg.png');"></div>
+        <div class="offering-card__overlay"></div>
+        <div class="offering-card__content">
+          <div>
+            <span class="studio-mono">smile enhancements</span>
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; font-weight: 500; color: #13271F; margin-top: 4px; transition: color 0.3s;">Cosmetic Smile Redesign</h3>
           </div>
-          <div class="glass-flip-card-back" style="background-image: url('./assets/cosmetic_dentistry_bg.png');">
-            <div class="glass-flip-card-back-content">
-              <h3 style="color: #FFFFFF; font-weight: 700; font-size: 1.35rem; margin-bottom: var(--space-md);">Cosmetic Veneers</h3>
-              <p style="font-size: 0.9rem; margin-bottom: var(--space-lg); line-height: 1.4;">Reshape, brighten, and perfect your teeth with personalized smile redesign plans.</p>
-              <a href="./cosmetic-dentistry/" class="glass-btn glass-btn-primary" style="width: 100%;">Explore Cosmetic Care</a>
-            </div>
+          <div>
+            <p style="color: rgba(26, 46, 38, 0.85); font-size: 0.95rem; line-height: 1.5; margin-bottom: var(--space-md); transition: color 0.3s;">Premium porcelain veneers, professional teeth whitening, cosmetic bonding, and therapeutic Botox® wrinkle relief.</p>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-decoration: underline; color: #C5A880; font-weight: 500;">VIEW COSMETIC HUB &rarr;</span>
           </div>
         </div>
       </div>
 
       
-      <div class="glass-flip-card" tabindex="0">
-        <div class="glass-flip-card-inner">
-          <div class="glass-flip-card-front">
-            <svg class="flip-card-front__icon" viewBox="6 6 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 56px; height: 56px; margin-bottom: var(--space-md);">
-              <defs>
-                <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#1856FF"/>
-                  <stop offset="100%" stop-color="#07CA6B"/>
-                </linearGradient>
-              </defs>
-              <circle cx="32" cy="32" r="28" fill="rgba(7, 202, 107, 0.1)"/>
-              <path d="M18 16c0-3 3-5 6-5h16c3 0 6 2 6 5 0 4-1.5 5-2.5 6.5C42.5 24 41 25.5 41 27.5H23c0-2-1.5-3.5-2.5-5C19.5 21 18 20 18 16z" fill="rgba(255,255,255,0.7)"/>
-              <path d="M28 30.5h8v8l-4 8-4-8v-8z" fill="url(#metalGrad)"/>
-            </svg>
-            <h3 style="font-weight: 700; font-size: 1.35rem; margin-bottom: var(--space-sm);">Dental Implants</h3>
-            <p style="font-size: 0.925rem; color: var(--color-text-light); line-height: 1.5; margin: 0;">Permanent restoration anchors including All-on-4®, mini implants, and reconstruction.</p>
+      <div class="offering-card" onclick="window.location.href='./dental-implants/'">
+        <div class="offering-card__bg" style="background-image: url('./assets/dental_implants_bg.png');"></div>
+        <div class="offering-card__overlay"></div>
+        <div class="offering-card__content">
+          <div>
+            <span class="studio-mono">restorative mastery</span>
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; font-weight: 500; color: #13271F; margin-top: 4px; transition: color 0.3s;">Advanced Implantology</h3>
           </div>
-          <div class="glass-flip-card-back" style="background-image: url('./assets/dental_implants_bg.png');">
-            <div class="glass-flip-card-back-content">
-              <h3 style="color: #FFFFFF; font-weight: 700; font-size: 1.35rem; margin-bottom: var(--space-md);">Implants Restores</h3>
-              <p style="font-size: 0.9rem; margin-bottom: var(--space-lg); line-height: 1.4;">Replace single or multiple missing teeth with stable, natural-looking implant anchors.</p>
-              <a href="./dental-implants/" class="glass-btn glass-btn-primary" style="width: 100%;">Explore Implants</a>
-            </div>
+          <div>
+            <p style="color: rgba(26, 46, 38, 0.85); font-size: 0.95rem; line-height: 1.5; margin-bottom: var(--space-md); transition: color 0.3s;">Replace missing teeth permanently with All-on-4® full-arch restorations, mini implants, and guided 3D surgical diagnostics.</p>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-decoration: underline; color: #C5A880; font-weight: 500;">LEARN ABOUT IMPLANTS &rarr;</span>
           </div>
         </div>
       </div>
 
       
-      <div class="glass-flip-card" tabindex="0">
-        <div class="glass-flip-card-inner">
-          <div class="glass-flip-card-front">
-            <svg class="flip-card-front__icon" viewBox="6 6 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 56px; height: 56px; margin-bottom: var(--space-md);">
-              <circle cx="32" cy="32" r="28" fill="rgba(24, 86, 255, 0.08)"/>
-              <path d="M17 26.5C17 14.5 23.5 10.5 32 10.5S47 14.5 47 26.5" stroke="#1856FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
-              <rect x="23" y="24" width="4" height="4" rx="1" fill="#1856FF"/>
-              <rect x="38" y="24" width="4" height="4" rx="1" fill="#1856FF"/>
-              <rect x="30" y="20" width="4" height="4" rx="1" fill="#1856FF"/>
-            </svg>
-            <h3 style="font-weight: 700; font-size: 1.35rem; margin-bottom: var(--space-sm);">Invisalign® Aligners</h3>
-            <p style="font-size: 0.925rem; color: var(--color-text-light); line-height: 1.5; margin: 0;">Virtually invisible, comfortable clear plastic trays to align crowding and gaps.</p>
+      <div class="offering-card" onclick="window.location.href='./orthodontics/invisalign/'">
+        <div class="offering-card__bg" style="background-image: url('./assets/invisalign_aligners_bg.png');"></div>
+        <div class="offering-card__overlay"></div>
+        <div class="offering-card__content">
+          <div>
+            <span class="studio-mono">clear alignments</span>
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; font-weight: 500; color: #13271F; margin-top: 4px; transition: color 0.3s;">Invisalign® Clear Braces</h3>
           </div>
-          <div class="glass-flip-card-back" style="background-image: url('./assets/invisalign_aligners_bg.png');">
-            <div class="glass-flip-card-back-content">
-              <h3 style="color: #FFFFFF; font-weight: 700; font-size: 1.35rem; margin-bottom: var(--space-md);">Clear Orthodontics</h3>
-              <p style="font-size: 0.9rem; margin-bottom: var(--space-lg); line-height: 1.4;">Achieve straight teeth discreetly without metal brackets or food limitations.</p>
-              <a href="./orthodontics/invisalign/" class="glass-btn glass-btn-primary" style="width: 100%;">Explore Invisalign</a>
-            </div>
+          <div>
+            <p style="color: rgba(26, 46, 38, 0.85); font-size: 0.95rem; line-height: 1.5; margin-bottom: var(--space-md); transition: color 0.3s;">Align crowding, overlaps, and bite discrepancies comfortably using premium, virtually invisible clear plastic aligners.</p>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-decoration: underline; color: #C5A880; font-weight: 500;">EXPLORE INVISALIGN &rarr;</span>
           </div>
         </div>
       </div>
@@ -887,83 +701,38 @@
 </section>
 
 
-<section class="section-padding">
-  <div class="container">
-    <div class="glass-panel" style="padding: var(--space-2xl);">
-      <div class="split-section" style="align-items: center; gap: var(--space-3xl);">
-        <div style="flex: 1; display: flex; justify-content: center;">
-          <div class="glass-img-frame" style="max-width: 440px; width: 100%; border-radius: 20px;">
-            <img src="./assets/dr_rahat_sood.png" alt="Dr. Rahat Sood, DMD - Principal Dentist at Crofton Dental Center" style="width: 100%; display: block;">
-          </div>
-        </div>
-        <div style="flex: 1.2;">
-          <span class="glass-label-caps">Meet the Dentist</span>
-          <h2 style="font-weight: 800; font-size: 2.25rem; margin-bottom: var(--space-md);">Gentle, Experienced Care by Dr. Rahat Sood, DMD</h2>
-          <p style="margin-bottom: var(--space-md); font-size: 1.05rem; line-height: 1.6; color: var(--color-text-dark);">Dr. Rahat Sood earned her Doctor of Dental Medicine (DMD) with high honors from the <strong>Boston University Henry M. Goldman School of Dental Medicine</strong>. She is dedicated to offering personalized, highly comfortable treatments.</p>
-          <p style="margin-bottom: var(--space-lg); color: var(--color-text-light); line-height: 1.6;">Recognized as a TOP Dentist throughout the Anne Arundel and Prince Georges County regions, she is featured as an expert guest on CNN Headline News, FOX News, CNBC, and the Oprah Winfrey Network (OWN).</p>
-          
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); margin-bottom: var(--space-xl); font-size: 0.9rem; font-family: 'JetBrains Mono', monospace;">
-            <div style="display: flex; align-items: center; gap: var(--space-xs);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1856FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-              <span style="font-weight: 500;">ADA & MSDA Member</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: var(--space-xs);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1856FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-              <span style="font-weight: 500;">High Honors Boston Univ.</span>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-            <a href="./about-us/meet-dr-rahat-sood/" class="glass-btn">View Biography</a>
-            <button class="glass-btn glass-btn-primary request-btn-drawer">Request Consultation</button>
-          </div>
+<section class="studio-section">
+  <div class="studio-container">
+    <div class="studio-grid-2">
+      <div style="display: flex; justify-content: center;">
+        <div class="studio-img-frame" style="max-width: 440px; width: 100%;">
+          <img src="./assets/dr_rahat_sood.png" alt="Dr. Rahat Sood, DMD" style="width: 100%; display: block; filter: contrast(1.01) saturate(0.98);">
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section-padding">
-  <div class="container">
-    <div class="split-section" style="align-items: center; gap: var(--space-3xl);">
-      <div style="flex: 1.1;">
-        <span class="glass-label-caps">Community Charity</span>
-        <h2 style="font-weight: 800; margin-bottom: var(--space-md);">Crofton Cares: Making a Local Difference</h2>
-        <p style="margin-bottom: var(--space-xl); font-size: 1.05rem; color: var(--color-text-light);">We align with local initiatives to foster health, happiness, and relief for families and pets in our region.</p>
+      <div>
+        <span class="studio-mono">leading clinical expertise</span>
+        <h2 class="studio-display" style="font-size: 2.75rem; margin-top: var(--space-xs); margin-bottom: var(--space-md);">Gentle Care, High-Honors Distinction</h2>
+        <p style="font-size: 1.05rem; line-height: 1.6; color: #1A2E26; margin-bottom: var(--space-md);">
+          Dr. Rahat Sood earned her Doctor of Dental Medicine (DMD) with high honors from the renowned <strong>Boston University Henry M. Goldman School of Dental Medicine</strong>. 
+        </p>
+        <p style="color: rgba(26, 46, 38, 0.8); line-height: 1.6; margin-bottom: var(--space-xl);">
+          Recognized as a leading Dentist in Anne Arundel County, she is dedicated to providing personalized care and comfort. Dr. Sood has also contributed expert insights on CNN Headline News, FOX News, CNBC, and the Oprah Winfrey Network (OWN).
+        </p>
         
-        <div style="display: flex; flex-direction: column; gap: var(--space-lg); margin-bottom: var(--space-2xl);">
-          <div class="glass-card" style="display: flex; gap: var(--space-md); padding: var(--space-lg); border-radius: 16px;">
-            <div style="font-size: 1.75rem; line-height: 1;">🐾</div>
-            <div>
-              <h4 style="font-weight: 700; font-size: 1.1rem; margin: 0 0 4px 0; color: var(--color-text-dark);">Zoey's Legacy SPCA Drive</h4>
-              <p style="font-size: 0.925rem; color: var(--color-text-light); margin: 0; line-height: 1.4;">Supporting the Anne Arundel County SPCA through our annual community animal donation drive in memory of our beloved Zoey.</p>
-            </div>
+        <div style="display: flex; flex-direction: column; gap: var(--space-sm); margin-bottom: var(--space-xl); font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;">
+          <div style="display: flex; align-items: center; gap: var(--space-xs);">
+            <span style="color: #C5A880; font-size: 1.1rem;">✔</span>
+            <span>American Dental Association (ADA) Member</span>
           </div>
-          <div class="glass-card" style="display: flex; gap: var(--space-md); padding: var(--space-lg); border-radius: 16px;">
-            <div style="font-size: 1.75rem; line-height: 1;">🌾</div>
-            <div>
-              <h4 style="font-weight: 700; font-size: 1.1rem; margin: 0 0 4px 0; color: var(--color-text-dark);">Annual Holiday Food Drive</h4>
-              <p style="font-size: 0.925rem; color: var(--color-text-light); margin: 0; line-height: 1.4;">Partnering with the Crofton Food Bank every fall to collect and distribute essential food items to local families in need.</p>
-            </div>
+          <div style="display: flex; align-items: center; gap: var(--space-xs);">
+            <span style="color: #C5A880; font-size: 1.1rem;">✔</span>
+            <span>Maryland State Dental Association (MSDA) Member</span>
           </div>
         </div>
 
-        <a href="./community/" class="glass-btn glass-btn-primary">View Our Partnerships</a>
-      </div>
-      
-      <div style="flex: 0.9; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
-        <div class="glass-card" style="overflow: hidden; border-radius: 20px; height: 260px; padding: 0; border: 1px solid rgba(255,255,255,0.4);">
-          <img src="./assets/spca_donation_drive.png" alt="Zoey's Legacy SPCA animal support" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </div>
-        <div class="glass-card" style="overflow: hidden; border-radius: 20px; height: 260px; margin-top: var(--space-xl); padding: 0; border: 1px solid rgba(255,255,255,0.4);">
-          <img src="./assets/crofton_food_drive.png" alt="Crofton Food Bank Donation drive" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+          <a href="./about-us/meet-dr-rahat-sood/" class="studio-btn studio-btn-secondary">Read Professional Bio</a>
+          <button class="studio-btn studio-btn-primary request-btn-drawer">Request Consultation</button>
         </div>
       </div>
     </div>
@@ -971,147 +740,183 @@
 </section>
 
 
-<section class="container">
-  <div class="glass-insurance-section" style="background-image: url('./assets/insurance_financing_bg.png');">
-    <div class="glass-insurance-content">
-      <span class="glass-label-caps glass-label-caps-light">Insurance & Financing</span>
-      <h2 style="font-weight: 800; font-size: 2.25rem; margin-bottom: var(--space-md); color: #FFFFFF;">Dental Care Without the Restrictions</h2>
-      <p style="margin-bottom: var(--space-lg); font-size: 1.025rem; color: rgba(255, 255, 255, 0.9); line-height: 1.6;">We accept and file most dental insurances to maximize your coverage. If you are uninsured, join our in-house <strong>Smile Club Membership</strong> to save 15% on treatments, or leverage CareCredit's flexible monthly terms.</p>
-      
-      <div style="display: flex; flex-direction: column; gap: var(--space-xs); margin-bottom: var(--space-xl); font-size: 0.95rem; color: #FFFFFF; font-family: 'JetBrains Mono', monospace;">
-        <div style="display: flex; align-items: center; gap: var(--space-xs);">
-          <span style="color: #07CA6B;">✔</span>
-          <span>No Deductibles or Claim Forms</span>
+<section class="studio-section">
+  <div class="studio-container">
+    <div class="studio-grid-2" style="align-items: stretch; gap: var(--space-3xl);">
+      <div style="display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <span class="studio-mono">community care</span>
+          <h2 class="studio-heading" style="margin-top: var(--space-xs); margin-bottom: var(--space-md);">Crofton Cares: Giving Back to Our Neighbors</h2>
+          <p style="font-size: 1.05rem; line-height: 1.6; color: rgba(26, 46, 38, 0.85); margin-bottom: var(--space-xl);">
+            At Crofton Dental Center, we believe that health extends beyond our clinic. We actively partner with local charity initiatives to support families and pets in need across Anne Arundel County.
+          </p>
+          
+          <div style="display: flex; flex-direction: column; gap: var(--space-lg); margin-bottom: var(--space-2xl);">
+            <div style="border-left: 2px solid #C5A880; padding-left: var(--space-md);">
+              <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; margin: 0 0 4px 0; color: #13271F;">Zoey's Legacy SPCA Drive</h4>
+              <p style="font-size: 0.925rem; color: rgba(26, 46, 38, 0.8); margin: 0; line-height: 1.5;">Annual donation drive supporting the local SPCA animal shelters in memory of our beloved pet, Zoey.</p>
+            </div>
+            <div style="border-left: 2px solid #C5A880; padding-left: var(--space-md);">
+              <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; margin: 0 0 4px 0; color: #13271F;">Annual Holiday Food Drive</h4>
+              <p style="font-size: 0.925rem; color: rgba(26, 46, 38, 0.8); margin: 0; line-height: 1.5;">Food collecting initiatives held every autumn to support the Crofton Food Bank and local families.</p>
+            </div>
+          </div>
         </div>
-        <div style="display: flex; align-items: center; gap: var(--space-xs);">
-          <span style="color: #07CA6B;">✔</span>
-          <span>Immediate Smile Club Activation</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: var(--space-xs);">
-          <span style="color: #07CA6B;">✔</span>
-          <span>CareCredit Flexible Financing Options</span>
+
+        <div>
+          <a href="./community/" class="studio-btn studio-btn-primary">View Partnerships</a>
         </div>
       </div>
-
-      <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-        <a href="./crofton-dental-center-smile-club/" class="glass-btn" style="color: #FFFFFF; border-color: rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.1);">Smile Club Inclusions</a>
-        <a href="./payment-options/" class="glass-btn glass-btn-primary">Payment & Insurance Info</a>
+      
+      <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-md);">
+        <div class="studio-img-frame" style="height: 240px;">
+          <img src="./assets/spca_donation_drive.png" alt="Zoey's Legacy SPCA Support" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+        <div class="studio-img-frame" style="height: 240px;">
+          <img src="./assets/crofton_food_drive.png" alt="Crofton Food Bank Donation Drive" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 
-<section class="section-padding">
-  <div class="container">
-    <div class="text-center" style="max-width: 700px; margin: 0 auto var(--space-2xl) auto;">
-      <span class="glass-label-caps">Help Center</span>
-      <h2 style="font-weight: 800; margin-bottom: var(--space-xs);">Get in Touch & Help Center</h2>
-      <p style="color: var(--color-text-light);">Have questions or want to request a slot? Fill out our contact portal or check common clinical answers on the right.</p>
+<section class="studio-section" style="padding: 0; background-color: #13271F; border: none; overflow: hidden;">
+  <div class="glass-insurance-section" style="background-image: url('./assets/insurance_financing_bg.png'); border-radius: 0; border: none; box-shadow: none; margin: 0;">
+    <div class="studio-container">
+      <div class="glass-insurance-content" style="max-width: 620px; padding: var(--space-3xl) 0;">
+        <span class="studio-mono" style="color: #C5A880;">coverage & plans</span>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 3rem; line-height: 1.1; margin-top: var(--space-sm); margin-bottom: var(--space-md); color: #FAF9F5;">Dental Care Without the Administrative Hurdles</h2>
+        <p style="margin-bottom: var(--space-xl); font-size: 1.05rem; color: rgba(250, 249, 245, 0.85); line-height: 1.7;">
+          We maximize your dental benefits by filing claims for most insurances. No insurance? Join our in-house <strong>Smile Club Membership</strong> for an immediate 15% discount on treatments, or utilize CareCredit for flexible monthly installment terms.
+        </p>
+        
+        <div style="display: flex; flex-direction: column; gap: var(--space-sm); margin-bottom: var(--space-2xl); font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #FAF9F5;">
+          <div style="display: flex; align-items: center; gap: var(--space-xs);">
+            <span style="color: #C5A880; font-size: 1.1rem;">✔</span>
+            <span>No Deductibles, Waiting Periods, or Claim Forms</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: var(--space-xs);">
+            <span style="color: #C5A880; font-size: 1.1rem;">✔</span>
+            <span>Includes 2 Cleanings & Exams Annually</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: var(--space-xs);">
+            <span style="color: #C5A880; font-size: 1.1rem;">✔</span>
+            <span>Simple Monthly or Annual Payment Rates</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+          <a href="./crofton-dental-center-smile-club/" class="studio-btn studio-btn-light">Smile Club Details</a>
+          <a href="./payment-options/" class="studio-btn studio-btn-secondary" style="color: #FAF9F5; border-color: rgba(250, 249, 245, 0.25);">Payment & Insurance Info</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="studio-section">
+  <div class="studio-container">
+    <div style="max-width: 680px; margin-bottom: var(--space-3xl);">
+      <span class="studio-mono">help center</span>
+      <h2 class="studio-heading" style="margin-top: var(--space-xs); margin-bottom: var(--space-sm);">Connect With Us & Find Answers</h2>
+      <p style="color: rgba(26, 46, 38, 0.8); line-height: 1.6; margin: 0;">Have a clinical question or ready to request a slot? Fill out our contact portal or check common patient queries on the right.</p>
     </div>
 
-    <div class="help-center-grid" style="gap: var(--space-xl);">
+    <div class="studio-grid-2" style="align-items: start; gap: var(--space-3xl);">
       
       
-      <div class="glass-card" style="padding: var(--space-xl);">
-        <h3 style="font-weight: 700; font-size: 1.35rem; margin-bottom: var(--space-md); color: var(--color-text-dark);">Send Us A Message</h3>
+      <div class="studio-card" style="padding: var(--space-2xl);">
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 500; color: #13271F; margin-bottom: var(--space-lg);">Inquire Directly</h3>
         <form class="Polaris-FormLayout" id="contact-page-form">
           <div class="Polaris-FormLayout__Item">
-            <label class="Polaris-Label" for="contact-name" style="font-weight: 600; font-size: 0.9rem;">Your Full Name</label>
-            <input type="text" id="contact-name" class="Polaris-TextField" required placeholder="John Doe" style="background: rgba(255,255,255,0.4); border-color: rgba(255,255,255,0.5); border-radius: 8px;">
+            <label class="Polaris-Label" for="contact-name" style="font-size: 0.85rem; font-weight: 500; margin-bottom: 4px; display: block;">Full Name</label>
+            <input type="text" id="contact-name" class="studio-input" required placeholder="John Doe">
           </div>
           <div class="Polaris-FormLayout__Item">
-            <label class="Polaris-Label" for="contact-email" style="font-weight: 600; font-size: 0.9rem;">Email Address</label>
-            <input type="email" id="contact-email" class="Polaris-TextField" required placeholder="john@example.com" style="background: rgba(255,255,255,0.4); border-color: rgba(255,255,255,0.5); border-radius: 8px;">
+            <label class="Polaris-Label" for="contact-email" style="font-size: 0.85rem; font-weight: 500; margin-bottom: 4px; display: block;">Email Address</label>
+            <input type="email" id="contact-email" class="studio-input" required placeholder="john@example.com">
           </div>
           <div class="Polaris-FormLayout__Item">
-            <label class="Polaris-Label" for="contact-phone" style="font-weight: 600; font-size: 0.9rem;">Phone Number</label>
-            <input type="tel" id="contact-phone" class="Polaris-TextField" placeholder="301-261-3800" style="background: rgba(255,255,255,0.4); border-color: rgba(255,255,255,0.5); border-radius: 8px;">
+            <label class="Polaris-Label" for="contact-phone" style="font-size: 0.85rem; font-weight: 500; margin-bottom: 4px; display: block;">Phone Number</label>
+            <input type="tel" id="contact-phone" class="studio-input" placeholder="301-261-3800">
           </div>
           <div class="Polaris-FormLayout__Item">
-            <label class="Polaris-Label" for="contact-message" style="font-weight: 600; font-size: 0.9rem;">Your Message</label>
-            <textarea id="contact-message" class="Polaris-TextField" rows="3" required placeholder="Let us know how Dr. Sood and the staff can help you..." style="background: rgba(255,255,255,0.4); border-color: rgba(255,255,255,0.5); border-radius: 8px;"></textarea>
+            <label class="Polaris-Label" for="contact-message" style="font-size: 0.85rem; font-weight: 500; margin-bottom: 4px; display: block;">Your Message</label>
+            <textarea id="contact-message" class="studio-input" rows="4" required placeholder="Describe how we can assist you..."></textarea>
           </div>
-          <div class="Polaris-FormLayout__Item">
-            <button type="submit" class="glass-btn glass-btn-primary" style="width: 100%;">
+          <div class="Polaris-FormLayout__Item" style="margin-top: var(--space-lg);">
+            <button type="submit" class="studio-btn studio-btn-primary" style="width: 100%; padding: 1.125rem;">
               <span>Submit Message</span>
             </button>
           </div>
         </form>
-        <div id="contact-form-success" class="Polaris-Banner Polaris-Banner--statusSuccess" style="display: none; margin-top: 1.5rem; background: rgba(7, 202, 107, 0.15); border-radius: 12px; border-color: #07CA6B;">
-          <div class="Polaris-Banner__Ribbon" style="color: #07CA6B;">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-          </div>
+        <div id="contact-form-success" class="Polaris-Banner Polaris-Banner--statusSuccess" style="display: none; margin-top: 1.5rem; background-color: rgba(19, 39, 31, 0.03); border: 1px solid #13271F; border-radius: 8px; padding: var(--space-md);">
           <div class="Polaris-Banner__Content">
-            <h4 class="Polaris-Banner__Title" style="color: var(--color-text-dark); font-weight: 700;">Message Submitted!</h4>
-            <p style="color: var(--color-text-light);">Thank you. Our Crofton office coordinator will review and contact you shortly.</p>
+            <h4 class="Polaris-Banner__Title" style="font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: #13271F; margin-bottom: 4px;">Inquiry Sent</h4>
+            <p style="font-size: 0.9rem; color: rgba(26, 46, 38, 0.8); margin: 0;">Our scheduling coordinator will contact you shortly.</p>
           </div>
         </div>
       </div>
 
       
       <div>
-        <h3 style="font-weight: 700; font-size: 1.35rem; margin-bottom: var(--space-md); padding-left: var(--space-xs); color: var(--color-text-dark);">Frequently Asked Questions</h3>
-        <div style="margin-bottom: var(--space-xl);">
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 500; color: #13271F; margin-bottom: var(--space-lg);">Patient FAQs</h3>
+        <div class="studio-faq">
           
-          <div class="glass-accordion-item">
-            <button class="glass-accordion-title">
+          <div class="studio-faq-item">
+            <button class="studio-faq-header">
               <span>What should I bring to my first appointment?</span>
               <span style="font-size: 0.8rem; transition: transform 0.3s ease;">▼</span>
             </button>
-            <div class="glass-accordion-content">
-              <p style="margin: 0; padding-bottom: var(--space-lg); line-height: 1.5;">Please bring your ID, dental insurance card, and completed patient forms. You can download and print our New Patient Packet from the Patient Forms page.</p>
+            <div class="studio-faq-content">
+              <p>Please bring a valid photo ID, your active dental insurance card, and any completed patient forms. You can pre-download our New Patient Packet from the Patient Forms page.</p>
             </div>
           </div>
 
-          <div class="glass-accordion-item">
-            <button class="glass-accordion-title">
+          <div class="studio-faq-item">
+            <button class="studio-faq-header">
               <span>Do you offer sedation options for dental anxiety?</span>
               <span style="font-size: 0.8rem; transition: transform 0.3s ease;">▼</span>
             </button>
-            <div class="glass-accordion-content">
-              <p style="margin: 0; padding-bottom: var(--space-lg); line-height: 1.5;">Yes, Dr. Rahat Sood specializes in relaxing, anxiety-free care. We offer multiple sedation options (such as nitrous oxide and oral conscious sedation) alongside blankets and pillows to keep you completely comfortable.</p>
+            <div class="studio-faq-content">
+              <p>Yes. Dr. Sood and the staff are certified in sedation techniques. We offer nitrous oxide (laughing gas) and oral conscious sedation to help you remain fully comfortable and relaxed.</p>
             </div>
           </div>
 
-          <div class="glass-accordion-item">
-            <button class="glass-accordion-title">
+          <div class="studio-faq-item">
+            <button class="studio-faq-header">
               <span>How does the Smile Club savings plan work?</span>
               <span style="font-size: 0.8rem; transition: transform 0.3s ease;">▼</span>
             </button>
-            <div class="glass-accordion-content">
-              <p style="margin: 0; padding-bottom: var(--space-lg); line-height: 1.5;">Our in-house Smile Club is a savings plan for patients without insurance. It includes 2 routine cleanings, 2 exams, 2 fluoride treatments, x-rays, and 1 emergency exam annually, plus 15% off other treatments and 25% off Zoom whitening. There are no claims, deductibles, or waiting periods!</p>
+            <div class="studio-faq-content">
+              <p>The Smile Club is an in-house membership plan for patients without dental insurance. It covers two regular cleanings, exams, X-rays, and one emergency exam annually, plus a 15% discount on all other clinical procedures.</p>
             </div>
           </div>
 
-          <div class="glass-accordion-item">
-            <button class="glass-accordion-title">
-              <span>Where are you located and where should I park?</span>
+          <div class="studio-faq-item">
+            <button class="studio-faq-header">
+              <span>Where is the clinic located?</span>
               <span style="font-size: 0.8rem; transition: transform 0.3s ease;">▼</span>
             </button>
-            <div class="glass-accordion-content">
-              <p style="margin: 0; padding-bottom: var(--space-lg); line-height: 1.5;">We are located at 1664 Village Green, Crofton, MD 21114, directly across from the Crofton Country Club. Ample, free parking is available right in front of our main entrance.</p>
+            <div class="studio-faq-content">
+              <p>We are located at 1664 Village Green, Crofton, MD 21114, directly opposite the Crofton Country Club. Safe, free parking is available in front of the office entrance.</p>
             </div>
           </div>
 
         </div>
+
         
-        
-        <div class="glass-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-          <div style="display: flex; flex-wrap: wrap; align-items: center;">
-            <div style="flex: 1 1 170px; height: 160px; overflow: hidden;">
-              <img src="./assets/dental_consultation.png" alt="Dental consultation with Dr. Sood" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="flex: 1.3 1 210px; padding: var(--space-lg);">
-              <h4 style="font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; color: var(--color-text-dark);">Direct Office Inquiries</h4>
-              <p style="font-size: 0.825rem; color: var(--color-text-light); margin-bottom: var(--space-sm);">Our scheduling team is available to assist you directly:</p>
-              <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 4px; font-family: 'JetBrains Mono', monospace;">
-                <span>📞 <a href="tel:301-261-3800" style="color: #1856FF; font-weight: 600;">301-261-3800</a></span>
-                <span>✉️ <a href="mailto:info@croftondentalcenter.com" style="color: #1856FF; font-weight: 600;">info@croftondentalcenter.com</a></span>
-                <span style="color: var(--color-text-light);">📍 1664 Village Green, Crofton</span>
-              </div>
+        <div class="studio-card" style="margin-top: var(--space-xl); padding: var(--space-lg); display: flex; align-items: center; gap: var(--space-lg); flex-wrap: wrap;">
+          <div style="width: 100px; height: 100px; overflow: hidden; border-radius: 12px; flex-shrink: 0;">
+            <img src="./assets/dental_consultation.png" alt="Dental consult" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1 1 200px;">
+            <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: #13271F; margin: 0 0 6px 0;">Direct Scheduling Inquiries</h4>
+            <div style="font-size: 0.85rem; line-height: 1.6; color: rgba(26, 46, 38, 0.85);">
+              <span>📞 Phone: <a href="tel:301-261-3800" style="color: #13271F; font-weight: 600; text-decoration: underline;">301-261-3800</a></span><br>
+              <span>✉️ Email: <a href="mailto:info@croftondentalcenter.com" style="color: #13271F; font-weight: 600; text-decoration: underline;">info@croftondentalcenter.com</a></span>
             </div>
           </div>
         </div>
@@ -1125,60 +930,22 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // 1. Hero Glass Slider
-    const slides = document.querySelectorAll(".hero-glass-slide");
-    const dots = document.querySelectorAll(".slider-dots .slider-dot");
-    let currentSlide = 0;
-    let slideInterval;
-
-    function showSlide(index) {
-      slides.forEach(s => s.classList.remove("active"));
-      dots.forEach(d => d.classList.remove("active"));
-      
-      slides[index].classList.add("active");
-      dots[index].classList.add("active");
-      currentSlide = index;
-    }
-
-    function nextSlide() {
-      let next = (currentSlide + 1) % slides.length;
-      showSlide(next);
-    }
-
-    function startSlideShow() {
-      slideInterval = setInterval(nextSlide, 6000);
-    }
-
-    function resetSlideShow() {
-      clearInterval(slideInterval);
-      startSlideShow();
-    }
-
-    dots.forEach((dot, idx) => {
-      dot.addEventListener("click", () => {
-        showSlide(idx);
-        resetSlideShow();
-      });
-    });
-
-    startSlideShow();
-
-    // 2. Glass Accordion Items
-    const accordionHeaders = document.querySelectorAll(".glass-accordion-title");
-    accordionHeaders.forEach(header => {
+    // FAQ Accordion
+    const faqHeaders = document.querySelectorAll(".studio-faq-header");
+    faqHeaders.forEach(header => {
       header.addEventListener("click", () => {
         const item = header.parentElement;
-        const content = item.querySelector(".glass-accordion-content");
+        const content = item.querySelector(".studio-faq-content");
         const icon = header.querySelector("span:last-child");
         
         const isOpen = item.classList.contains("active");
         
         // Close all other items
-        document.querySelectorAll(".glass-accordion-item").forEach(otherItem => {
+        document.querySelectorAll(".studio-faq-item").forEach(otherItem => {
           if (otherItem !== item) {
             otherItem.classList.remove("active");
-            otherItem.querySelector(".glass-accordion-content").style.maxHeight = null;
-            otherItem.querySelector(".glass-accordion-title span:last-child").style.transform = null;
+            otherItem.querySelector(".studio-faq-content").style.maxHeight = null;
+            otherItem.querySelector(".studio-faq-header span:last-child").style.transform = null;
           }
         });
 
@@ -1194,7 +961,7 @@
       });
     });
 
-    // 3. Contact Form Submission
+    // Contact Form Submission
     const contactForm = document.getElementById("contact-page-form");
     const successPanel = document.getElementById("contact-form-success");
     if (contactForm && successPanel) {
@@ -1208,7 +975,7 @@
         setTimeout(() => {
           contactForm.reset();
           contactForm.style.display = "none";
-          successPanel.style.display = "flex";
+          successPanel.style.display = "block";
           btn.disabled = false;
           btn.innerHTML = originalContent;
         }, 1200);
